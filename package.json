@@ -1,7 +1,7 @@
 {
-  "name": "bz-demo",
+  "name": "bz-bottom-loader",
   "version": "1.0.1",
-  "description": "bz-demo",
+  "description": "bz-bottom-loader",
   "main": "dist/main.js",
   "keywords": [
     "vue",
@@ -11,12 +11,12 @@
   "author": "bigzhu <vermiliondun@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigzhu/bz-demo.git"
+    "url": "git+https://github.com/bigzhu/bz-bottom-loader.git"
   },
   "bugs": {
-    "url": "https://github.com/bigzhu/bz-demo/issues"
+    "url": "https://github.com/bigzhu/bz-bottom-loader/issues"
   },
-  "homepage": "https://github.com/bigzhu/bz-demo#readme",
+  "homepage": "https://github.com/bigzhu/bz-bottom-loader#readme",
   "files": [
     "dist"
   ],
