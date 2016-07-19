@@ -7,8 +7,8 @@
 
 <script>
   import $ from 'jquery'
-  // import _ from 'underscore'
-  // import 'bz-semantic-ui-visibility'
+  import _ from 'underscore'
+  import 'bz-semantic-ui-visibility'
   export default {
     props: {
       el: {
@@ -38,7 +38,7 @@
     },
     methods: {
       bindScroll: function () {
-        // $(window).scroll(_.throttle(this.doScroll, 200))
+        $(window).scroll(_.throttle(this.doScroll, 200))
       },
       doScroll: function () {
         let last = $(this.el).find(this.element_class).last()

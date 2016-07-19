@@ -4,4 +4,3 @@ module.exports = {
   'bz-semantic-ui-visibility': 'bz-semantic-ui-visibility',
   'underscore': 'underscore'
 }
-
