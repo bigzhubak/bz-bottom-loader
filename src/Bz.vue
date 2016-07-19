@@ -8,7 +8,7 @@
 <script>
   import $ from 'jquery'
   import _ from 'underscore'
-  import 'bz-semantic-ui-visibility'
+  // import 'bz-semantic-ui-visibility'
   export default {
     props: {
       el: {
