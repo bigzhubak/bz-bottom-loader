@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",
-    "bz-semantic-ui-visibility": "^1.0.0",
+    "bz-semantic-ui-visibility": "^1.0.1",
     "jquery": "^3.0.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
