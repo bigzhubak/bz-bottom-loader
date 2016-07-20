@@ -6,7 +6,8 @@
 </template>
 
 <script>
-  import $ from 'jquery'
+  var $ = window.jQuery
+  // import $ from 'jquery'
   import _ from 'underscore'
   import 'bz-semantic-ui-visibility'
   export default {
