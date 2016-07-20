@@ -27,7 +27,9 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
-    "jquery": "^3.1.0"
+    "bz-semantic-ui-visibility": "^1.0.1",
+    "jquery": "^3.1.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
