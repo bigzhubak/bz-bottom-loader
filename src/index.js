@@ -3,6 +3,6 @@ import Doc from './Doc'
 
 /* eslint-disable no-new */
 new Vue({
-  el: 'body',
-  components: { Doc }
+  el: '#app',
+  render: h => h(Doc)
 })

@@ -1,15 +1,10 @@
-<style lang=less>
-</style>
-
 <template>
   <br>
 </template>
 
 <script>
-  var $ = window.jQuery
-  // import $ from 'jquery'
+  import $ from 'jquery'
   import _ from 'underscore'
-  import 'bz-semantic-ui-visibility'
   export default {
     props: {
       el: {
@@ -34,7 +29,7 @@
       return {
       }
     },
-    ready () {
+    created () {
       this.bindScroll()
     },
     methods: {

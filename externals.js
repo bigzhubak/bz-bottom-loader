@@ -1,5 +1,5 @@
 module.exports = {
-  jquery: 'jQuery',
+  jQuery: 'jQuery',
   'vue': 'Vue',
   'bz-semantic-ui-visibility': 'bz-semantic-ui-visibility',
   'underscore': 'underscore'
