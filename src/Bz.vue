@@ -3,6 +3,7 @@
 </template>
 
 <script>
+  // 自行去 $(window).unbind('scroll')
   import $ from 'jquery'
   import _ from 'lodash'
   export default {
@@ -13,14 +14,6 @@
       element_class: {
         required: true,
         type: String
-      },
-      call_back: {
-        required: true
-      }
-    },
-    events: {
-      'unbind-scroll': function () {
-        $(window).unbind('scroll')
       }
     },
     components: {
@@ -46,7 +39,7 @@
         let offset_bottom = last.offset().top + last.height()// padding
         if ($(window).scrollTop() + $(window).height() > offset_bottom) { // 滚动像素 + 屏幕高度 > 最后一个元素的底部  已经到底部了
           // console.log('bottom')
-          this.call_back()
+          this.$emit('bottom')
         }
       }
     }
