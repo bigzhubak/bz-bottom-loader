@@ -1,6 +1,3 @@
-<style lang=less>
-</style>
-
 <template>
   <div>
     <doc name="bz-bottom-loader"
@@ -18,7 +15,7 @@
           </div>
         </div>
       </div>
-      <bottom-loader :el="$el" element_class=".ui.card" :call_back="call_back"></bottom-loader>
+      <bottom-loader :el="$el" element_class=".ui.card" v-on:bottom="call_back"></bottom-loader>
     </doc>
   </div>
 </template>
