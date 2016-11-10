@@ -8,9 +8,6 @@
   import _ from 'lodash'
   export default {
     props: {
-      el: {
-        required: true
-      },
       element_class: {
         required: true,
         type: String
