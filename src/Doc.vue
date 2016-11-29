@@ -1,23 +1,21 @@
 <template>
-  <div>
-    <doc name="bz-bottom-loader"
-      desc="拉到底部加载"
-      parm_desc="滚动到底部以后，加载更多内容(dom没有屏幕长，是无法触发的，以后修正)"
-      :parms="parms"
-      :code="code"
-      >
-      <div class="ui grid">
-        <div  v-for="data in datas" class="sixteen wide column">
-          <div class="ui card">
-            <div class="content">
-              <a class="description">{{data}}</a>
-            </div>
+  <doc name="bz-bottom-loader"
+    desc="拉到底部加载"
+    parm_desc="滚动到底部以后，加载更多内容(dom没有屏幕长，是无法触发的，以后修正)"
+    :parms="parms"
+    :code="code"
+    >
+    <div class="ui grid">
+      <div  v-for="data in datas" class="sixteen wide column">
+        <div class="ui card">
+          <div class="content">
+            <a class="description">{{data}}</a>
           </div>
         </div>
       </div>
-      <bottom-loader element_class=".ui.card" v-on:bottom="call_back"></bottom-loader>
-    </doc>
-  </div>
+    </div>
+    <bottom-loader element_class=".ui.card" v-on:bottom="call_back"></bottom-loader>
+  </doc>
 </template>
 
 <script>
@@ -27,13 +25,6 @@
     components: {
       BottomLoader,
       Doc
-    },
-    route: {
-      deactivate: function (transition) {
-        this.$broadcast('unbind-scroll')
-        console.log('解除了scroll绑定')
-        transition.next()
-      }
     },
     data: function () {
       return {

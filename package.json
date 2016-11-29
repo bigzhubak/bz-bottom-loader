@@ -2,7 +2,7 @@
   "name": "bz-bottom-loader",
   "version": "2.0.5",
   "description": "bz-bottom-loader",
-  "main": "dist/main.js",
+  "main": "src/Bz.js",
   "keywords": [
     "vue",
     "component",
