@@ -1,7 +1,7 @@
 {
-  "name": "bz-bottom-loader",
-  "version": "2.0.5",
-  "description": "bz-bottom-loader",
+  "name": "bz-base",
+  "version": "2.0.0",
+  "description": "bz-base",
   "main": "dist/main.js",
   "keywords": [
     "vue",
@@ -11,21 +11,22 @@
   "author": "bigzhu <vermiliondun@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigzhu/bz-bottom-loader.git"
+    "url": "git+https://github.com/bigzhu/bz-base.git"
   },
   "bugs": {
-    "url": "https://github.com/bigzhu/bz-bottom-loader/issues"
+    "url": "https://github.com/bigzhu/bz-base/issues"
   },
-  "homepage": "https://github.com/bigzhu/bz-bottom-loader#readme",
+  "homepage": "https://github.com/bigzhu/bz-base#readme",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
+    "build": "node build/pack.js",
     "test": ""
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "vue": "latest",
     "autoprefixer": "^6.5.0",
