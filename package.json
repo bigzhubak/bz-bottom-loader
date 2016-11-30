@@ -2,7 +2,6 @@
   "name": "bz-base",
   "version": "2.0.0",
   "description": "bz-base",
-  "main": "dist/main.js",
   "name": "bz-bottom-loader",
   "version": "2.0.9",
   "description": "bz-bottom-loader",
