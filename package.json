@@ -4,7 +4,7 @@
   "description": "bz-base",
   "main": "dist/main.js",
   "name": "bz-bottom-loader",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "bz-bottom-loader",
   "main": "src/Bz.vue",
   "keywords": [
@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/bigzhu/bz-base#readme",
   "files": [
-    "src/Bz.vue"
+    "src/Bz.vue",
+    "src/assets"
   ],
   "scripts": {
     "dev": "node build/dev-server.js",
