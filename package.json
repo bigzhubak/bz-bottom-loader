@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/bigzhu/bz-bottom-loader#readme",
   "files": [
-    "src"
+    "src/Bz.vue"
   ],
   "scripts": {
     "dev": "node build/dev-server.js",
