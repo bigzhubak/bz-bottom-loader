@@ -1,15 +1,12 @@
 {
-<<<<<<< HEAD
   "name": "bz-base",
   "version": "2.0.0",
   "description": "bz-base",
   "main": "dist/main.js",
-=======
   "name": "bz-bottom-loader",
   "version": "2.0.8",
   "description": "bz-bottom-loader",
   "main": "src/Bz.vue",
->>>>>>> 6757fe7a897e1cf71bf150800dfdff9363463dfa
   "keywords": [
     "vue",
     "component",
