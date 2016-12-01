@@ -1,6 +1,6 @@
-# bz-bottom-loader
+# bz-base
 
-> bz-bottom-loader
+> bz-base
 
 ## Build Setup
 
