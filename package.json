@@ -1,9 +1,6 @@
 {
   "name": "bz-bottom-loader",
-  "version": "2.0.0",
-  "description": "bz-bottom-loader",
-  "name": "bz-bottom-loader",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "bz-bottom-loader",
   "main": "src/Bz.vue",
   "keywords": [
@@ -29,8 +26,7 @@
     "build": "node build/pack.js",
     "test": ""
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "vue": "latest",
     "autoprefixer": "^6.5.0",
