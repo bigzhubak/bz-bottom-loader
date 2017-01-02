@@ -1,47 +1,33 @@
 <template>
-  <br>
+  <div></div>
 </template>
 
 <script>
-  // 自行去 $(window).unbind('scroll')
-  import $ from 'jquery'
-  import _ from 'lodash'
   export default {
-    props: {
-      element_class: {
-        required: true,
-        type: String
-      }
-    },
-    components: {
-    },
     data: function () {
       return {
+        is_first: true
       }
     },
     mounted: function () {
       this.$nextTick(function () {
-        // code that assumes this.$el is in-document
-        this.bindScroll()
+        this.initIntersectionObserver()
       })
     },
     methods: {
-      bindScroll: function () {
-        $(window).scroll(_.throttle(this.doScroll, 200))
-      },
-      doScroll: function () {
-        let last = $(this.element_class).last()
-        if (!last.offset()) {
-          return
-        }
-        // 最后一个元素 元素偏移量+元素高度 得到元素底部的像素高度
-        // let offset_bottom = last.offset().top + last.height() + 14 - 1.12 // padding
-        let offset_bottom = last.offset().top + last.height()// padding
-
-        if ($(window).scrollTop() + $(window).height() > offset_bottom) { // 滚动像素 + 屏幕高度 > 最后一个元素的底部  已经到底部了
-          // console.log('bottom')
-          this.$emit('bottom')
-        }
+      initIntersectionObserver: function () {
+        let self = this
+        let io = new window.IntersectionObserver(
+          entries => {
+            if (self.is_first) { // 不考虑可见性,会导致第一次就会调用,用is_first避免第一次调用
+              self.is_first = false
+              return
+            }
+            // if (entries[0].intersectionRatio <= 0) return
+            self.$emit('bottom')
+          }
+        )
+        io.observe(this.$el)
       }
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <doc name="bz-bottom-loader"
     desc="拉到底部加载"
-    parm_desc="滚动到底部以后，加载更多内容(dom没有屏幕长，是无法触发的，以后修正)"
+    :parm_desc="parm_desc"
     :parms="parms"
     :code="code"
     >
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <bottom-loader element_class=".ui.card" v-on:bottom="call_back"></bottom-loader>
+    <bottom-loader v-on:bottom="call_back"></bottom-loader>
   </doc>
 </template>
 
@@ -28,13 +28,12 @@
     },
     data: function () {
       return {
-        datas: [1],
+        datas: [1, 2, 3, 4, 5],
         parms: [
-          {parm: 'element_class', desc: '用于定位last的class .hah.jj 的格式'},
           {parm: 'v-on:bottom', desc: '事件触发, 滚到底部的回调函数'}
         ],
-        parm_desc: `注意，如果使用的组件有路由，那么最好在切换路由的时候发送消息，解除绑定(参看本例子) <code>this.$broadcast('unbind-scroll')</code>`,
-        code: `<bottom-loader element_class=".ui.card" v-on:bottom="call_back"></bottom-loader>`
+        parm_desc: `把这个组件放在底部`,
+        code: `<bottom-loader v-on:bottom="call_back"></bottom-loader>`
       }
     },
     methods: {
