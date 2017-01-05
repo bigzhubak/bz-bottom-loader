@@ -1,21 +1,23 @@
 <template>
-  <doc name="bz-bottom-loader"
-    desc="拉到底部加载"
-    :parm_desc="parm_desc"
-    :parms="parms"
-    :code="code"
-    >
-    <div class="ui grid">
-      <div  v-for="data in datas" class="sixteen wide column">
-        <div class="ui card">
-          <div class="content">
-            <a class="description">{{data}}</a>
+  <div id='app'>
+    <doc name="bz-bottom-loader"
+      desc="拉到底部加载"
+      :parm_desc="parm_desc"
+      :parms="parms"
+      :code="code"
+      >
+      <div class="ui grid">
+        <div  v-for="data in datas" class="sixteen wide column">
+          <div class="ui card">
+            <div class="content">
+              <a class="description">{{data}}</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </doc>
     <bottom-loader v-on:bottom="call_back"></bottom-loader>
-  </doc>
+  </div>
 </template>
 
 <script>
@@ -28,7 +30,7 @@
     },
     data: function () {
       return {
-        datas: [1, 2, 3, 4, 5, 6],
+        datas: [1, 2],
         parms: [
           {parm: 'v-on:bottom', desc: 'scroll到底部时事件触发的回调函数'}
         ],
