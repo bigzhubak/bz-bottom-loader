@@ -28,11 +28,14 @@
     },
     data: function () {
       return {
-        datas: [1, 2, 3, 4, 5],
+        datas: [1, 2],
         parms: [
-          {parm: 'v-on:bottom', desc: '事件触发, 滚到底部的回调函数'}
+          {parm: 'v-on:bottom', desc: 'scroll到底部时事件触发的回调函数'}
         ],
-        parm_desc: `把这个组件放在底部`,
+        parm_desc: `把这个组件放在所有组件的最下面，
+        当scroll到browser viewport的底部时，它对于browser viewport可见性的变化，会触发一个事件。
+        （ 注：本例由于body content的高度不够而导致无法触发，把窗口缩小直到有上下滚的scroll就行了。）
+        `,
         code: `<bottom-loader v-on:bottom="call_back"></bottom-loader>`
       }
     },
