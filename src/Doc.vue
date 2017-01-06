@@ -28,7 +28,7 @@
     },
     data: function () {
       return {
-        datas: [1, 2, 3, 4, 5],
+        datas: [1, 2, 3, 4, 5, 6, 7],
         parms: [
           {parm: 'v-on:bottom', desc: '事件触发, 滚到底部的回调函数'}
         ],
