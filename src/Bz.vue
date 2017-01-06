@@ -3,8 +3,6 @@
 </template>
 
 <script>
-  import $ from 'jquery'
-
   export default {
     data: function () {
       return {
@@ -13,16 +11,6 @@
       }
     },
     mounted: function () {
-      let outerHeight = $('body').children('#app').outerHeight()
-      let windowHeight = $(window).height()
-
-      if (outerHeight < windowHeight) { // 内容的高度小于browser viewport的高度时 (例如当 datas.length < 6)
-        $(this.$el).css({
-          'marginTop': (windowHeight - outerHeight + 1) + 'px',
-          'height': '1px'
-        }) // 为组件增加一个marginTop, 避免因没有scroll导致无法触发新的加载事件
-      }
-
       this.$nextTick(function () {
         this.initIntersectionObserver()
       })
@@ -45,23 +33,6 @@
             // if (entries[0].intersectionRatio <= 0) return
             self.is_visible = true
             self.$emit('bottom')
-            self.$nextTick(function () { // 等到dom更新完毕再执行
-              let outerHeight = $('body').children('#app').outerHeight()
-              let windowHeight = $(window).height()
-              let marginTop = parseInt($(self.$el).css('marginTop'), 10)
-              let decrease = (marginTop - (outerHeight - windowHeight) + 2)
-
-              if (decrease > 0) {
-                $(self.$el).css({
-                  'marginTop': decrease + 'px'
-                }) // 随着body content高度增加,减小一定的marginTop
-              } else {
-                $(self.$el).css({
-                  'marginTop': '0px',
-                  'height': '0px'
-                }) // 当body content高度大于browser viewport时,该组件不再需要尺寸
-              }
-            })
           }
         )
 
